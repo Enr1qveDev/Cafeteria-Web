@@ -8,7 +8,7 @@
 /* Importar fuente personalizada */
 @font-face {
     font-family: 'Salon du Chocolat';
-    src: url('../fonts/salon du chocolat.ttf') format('truetype');
+    src: url('../fonts/salon-du-chocolat.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
