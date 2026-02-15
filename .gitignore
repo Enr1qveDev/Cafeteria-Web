@@ -1,0 +1,73 @@
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.bak
+*.cache
+
+# Node modules (si decides usar npm en el futuro)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Archivos de configuración sensibles
+.env
+.env.local
+.env.*.local
+config.local.js
+secrets.json
+
+# Carpetas de build/dist (si usas compiladores)
+dist/
+build/
+.cache/
+
+# Archivos de respaldo
+backup/
+*.backup
+
+# Imágenes temporales o de prueba subidas
+# (descomenta si subes imágenes de prueba que no quieres en git)
+# /img/temp/
+# /img/test/
+
+# Archivos duplicados que ya eliminamos
+Tipos.html
+
+# Fuentes (opcional - descomenta si las fuentes son muy pesadas)
+# /fonts/*.ttf
+# /fonts/*.otf
+# /fonts/*.woff
+# /fonts/*.woff2
+
+# Minificados automáticos
+*.min.css
+*.min.js
+
+# Capturas de pantalla de desarrollo
+screenshot*.png
+captura*.png
+test*.png
+1771*.png

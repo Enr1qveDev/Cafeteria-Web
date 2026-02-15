@@ -1,0 +1,447 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importar fuente personalizada */
+@font-face {
+    font-family: 'Salon du Chocolat';
+    src: url('../fonts/salon du chocolat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Variables de color */
+:root {
+    --color-primario: #8B6F47;
+    --color-secundario: #D4A574;
+    --color-acento: #C19A6B;
+    --color-fondo: #FFF8F0;
+    --color-texto: #FFFFFF;
+    --color-claro: #FFF;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+    url('../img/fondo1.jpg'),
+    url('../img/grano_cafe.jpg');
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    min-height: 100vh;
+}
+
+/* Header y Navegación */
+header {
+    background-color: transparent;
+    color: var(--color-claro);
+    padding: 1rem 0;
+    box-shadow: none;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Salon du Chocolat', cursive, Arial, sans-serif;
+}
+
+.menu-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.menu-nav a {
+    color: var(--color-claro);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-nav a:hover {
+    background-color: var(--color-acento);
+}
+
+.menu-nav a.active {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+/* Main */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        url('../img/fondo\ box\ bienvenida.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: #ffffff; 
+    margin-bottom: 1rem;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ffffff; 
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    background-color: #2d1810;
+    color: var(--color-claro);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background-color: #4a2c1a;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Secciones */
+.destacados,
+.horario {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.destacados h2,
+.horario h2,
+.page-header h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 6px rgb(0, 0, 9);
+}
+
+/* Color del contenido del horario (días y horas) */
+.horario p {
+    color: #D4A574;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: linear-gradient(135deg, #FFF8F0 0%, #F5E6D3 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    border: 2px solid #D4A574;
+}
+
+.card h3 {
+    color: #4a2c1a;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #2d1810;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+/* Productos - ALINEACIÓN 2x2 */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px auto;
+    padding: 0 20px;
+    max-width: 900px;
+}
+
+.producto {
+    background: linear-gradient(135deg, #FFF8F0 0%, #F5E6D3 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #D4A574;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.producto h3,
+.producto h4 {
+    color: #4a2c1a;
+    margin-bottom: 0.5rem;
+}
+
+.producto p {
+    color: #6F4E37;
+    margin-bottom: 1rem;
+}
+
+.precio {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2d1810;
+    margin-top: 0.5rem;
+}
+
+/* Productos destacados (desayunos) */
+.producto.destacado {
+    border: 2px solid var(--color-secundario);
+    background-color: #FFFAF5;
+}
+
+/* Productos sin lactosa */
+.producto.sin-lactosa {
+    border-left: 4px solid #4CAF50;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+/* Bollería */
+.bolleria {
+    background: linear-gradient(135deg, #FFF8F0 0%, #F5E6D3 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid #D4A574;
+}
+
+.bolleria h3 {
+    color: #4a2c1a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Info Box */
+.info-box {
+    background-color: #E8F5E9;
+    border-left: 4px solid #4CAF50;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.info-box h3 {
+    color: #2d1810;
+    margin-bottom: 1rem;
+}
+
+.info-box ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.info-box .nota {
+    font-style: italic;
+    color: #4a2c1a;
+    margin-top: 1rem;
+}
+
+.info-box p {
+    color: #333;
+}
+
+/* Títulos de secciones de productos */
+.titulo-productos {
+    font-size: 1.8rem;
+    color: #D4A574;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Formulario */
+.formulario-contacto {
+    background: linear-gradient(135deg, #FFF8F0 0%, #F5E6D3 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid #D4A574;
+}
+
+.formulario-contacto h3 {
+    color: #4a2c1a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Sección de información de contacto */
+.contacto-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-contacto {
+    background: linear-gradient(135deg, #FFF8F0 0%, #F5E6D3 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid #D4A574;
+    text-align: center;
+}
+
+.info-contacto h3 {
+    color: #4a2c1a;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.info-contacto p {
+    color: #2d1810;
+    line-height: 1.6;
+}
+
+.info-contacto a {
+    color: #8B6F47;
+    text-decoration: none;
+}
+
+.info-contacto a:hover {
+    color: #D4A574;
+    text-decoration: underline;
+}
+
+.form-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a2c1a;
+    font-weight: bold;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #d4a573;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    background-color: #FFFEF9;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    outline: none;
+    border-color: #8B6F47;
+    box-shadow: 0 0 5px rgba(139, 111, 71, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: transparent;
+    color: var(--color-claro);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .menu-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    /* Productos en 1 columna en móviles */
+    .productos {
+        grid-template-columns: 1fr;
+    }
+}
+
