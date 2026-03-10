@@ -1,57 +1,126 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Café Delicia - El mejor café de la ciudad. Granos seleccionados, desayunos deliciosos y opciones sin lactosa.">
+    <meta name="keywords" content="café, cafetería, desayunos, Madrid, sin lactosa, espresso, cappuccino">
+    <meta name="author" content="Café Delicia">
+    <meta name="theme-color" content="#8B6F47">
+    <meta property="og:title" content="Café Delicia - Inicio">
+    <meta property="og:description" content="El mejor café de la ciudad, preparado con amor y los mejores granos">
+    <meta property="og:type" content="website">
     <title>Café Delicia - Inicio</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
     <header>
-        <nav>
+        <nav aria-label="Navegación principal">
             <div class="logo">
                 <h1>Café Delicia</h1>
             </div>
-            <ul class="menu-nav">
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="menu-nav" id="menu-nav">
                 <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="cafes.html">Nuestros Cafés</a></li>
                 <li><a href="desayunos.html">Desayunos</a></li>
-                <li><a href="intolerantes.html">Intolerantes</a></li>
+                <li><a href="intolerantes.html">Sin Lactosa</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero-content">
-                <h2>Bienvenido a Café Delicia</h2>
+                <h2 id="hero-title">Bienvenido a Café Delicia</h2>
                 <p>El mejor café de la ciudad, preparado con amor y los mejores granos</p>
-                <a href="cafes.html" class="btn">Ver nuestros cafés</a>
+                <a href="cafes.html" class="btn btn-primary">Ver nuestros cafés</a>
             </div>
         </section>
 
-        <section class="destacados">
-            <h2>Lo que nos hace especiales</h2>
+        <section class="destacados" aria-labelledby="destacados-title">
+            <h2 id="destacados-title">Lo que nos hace especiales</h2>
             <div class="cards">
                 <div class="card">
-                    <h3>🌱 Café de Calidad</h3>
+                    <div class="card-icon"></div>
+                    <h3>Café de Calidad</h3>
                     <p>Granos seleccionados de origen sostenible</p>
                 </div>
                 <div class="card">
-                    <h3>🥛 Opciones sin Lactosa</h3>
+                    <div class="card-icon"></div>
+                    <h3>Opciones sin Lactosa</h3>
                     <p>Bebidas vegetales y alternativas para todos</p>
                 </div>
                 <div class="card">
-                    <h3>🥐 Desayunos Completos</h3>
+                    <div class="card-icon"></div>
+                    <h3>Desayunos Completos</h3>
                     <p>Bollería fresca todos los días</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="horario" aria-labelledby="horario-title">
+            <h2 id="horario-title">Horario de Apertura</h2>
+            <div class="horario-grid">
+                <div class="horario-item">
+                    <span class="dia">Lunes - Viernes</span>
+                    <span class="hora">7:00 - 20:00</span>
+                </div>
+                <div class="horario-item">
+                    <span class="dia">Sábados</span>
+                    <span class="hora">8:00 - 21:00</span>
+                </div>
+                <div class="horario-item">
+                    <span class="dia">Domingos</span>
+                    <span class="hora">8:00 - 21:00</span>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Café Delicia. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Café Delicia</h3>
+                <p>Calle del Café, 123, Madrid</p>
+            </div>
+                        <div class="footer-social">
+                <a href="#" aria-label="Instagram" class="social-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Facebook" class="social-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.737-.9 10.125-5.864 10.125-11.854z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Café Delicia. Todos los derechos reservados.</p>
     </footer>
+    
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuNav = document.querySelector('.menu-nav');
+        menuToggle.addEventListener('click', () => {
+            menuNav.classList.toggle('active');
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+        document.querySelectorAll('.menu-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuNav.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>
+
